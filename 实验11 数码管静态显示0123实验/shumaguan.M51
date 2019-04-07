@@ -1,0 +1,134 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        11/28/2014  14:13:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE shumaguan.obj TO shumaguan RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  shumaguan.obj (SHUMAGUAN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  shumaguan (SHUMAGUAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     003BH     UNIT         ?PR?DISPLAY?SHUMAGUAN
+            CODE    003EH     0012H     UNIT         ?PR?MAIN?SHUMAGUAN
+            CODE    0050H     000EH     UNIT         ?PR?_DELAY?SHUMAGUAN
+            CODE    005EH     000CH     UNIT         ?C_C51STARTUP
+            CODE    006AH     000AH     UNIT         ?CO?SHUMAGUAN
+
+
+
+OVERLAY MAP OF MODULE:   shumaguan (SHUMAGUAN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SHUMAGUAN
+
+?PR?MAIN?SHUMAGUAN
+  +--> ?PR?DISPLAY?SHUMAGUAN
+
+?PR?DISPLAY?SHUMAGUAN
+  +--> ?CO?SHUMAGUAN
+  +--> ?PR?_DELAY?SHUMAGUAN
+
+
+
+SYMBOL TABLE OF MODULE:  shumaguan (SHUMAGUAN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SHUMAGUAN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  14:13:13  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:006AH         PUBLIC        table
+  D:00A8H         PUBLIC        IE
+  C:0050H         PUBLIC        _delay
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A0H.1       PUBLIC        P2_1
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  D:00B8H         PUBLIC        IP
+  C:003EH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  C:0003H         PUBLIC        display
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        i
+  -------         DO            
+  D:0007H         SYMBOL        j
+  D:0006H         SYMBOL        k
+  -------         ENDDO         
+  C:0050H         LINE#         24
+  C:0050H         LINE#         25
+  C:0050H         LINE#         27
+  C:0056H         LINE#         28
+  C:005DH         LINE#         29
+  -------         ENDPROC       _DELAY
+  -------         PROC          DISPLAY
+  C:0003H         LINE#         31
+  C:0003H         LINE#         32
+  C:0003H         LINE#         34
+  C:000AH         LINE#         35
+  C:000CH         LINE#         36
+  C:0011H         LINE#         37
+  C:0013H         LINE#         39
+  C:0018H         LINE#         40
+  C:001AH         LINE#         41
+  C:001FH         LINE#         42
+  C:0021H         LINE#         44
+  C:0026H         LINE#         45
+  C:0028H         LINE#         46
+  C:002DH         LINE#         47
+  C:002FH         LINE#         49
+  C:0034H         LINE#         50
+  C:0036H         LINE#         51
+  C:003BH         LINE#         52
+  C:003DH         LINE#         54
+  -------         ENDPROC       DISPLAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:003EH         LINE#         57
+  C:003EH         LINE#         58
+  C:003EH         LINE#         61
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  14:13:13  PAGE 3
+
+
+  C:003EH         LINE#         62
+  C:003EH         LINE#         64
+  C:0042H         LINE#         65
+  C:0042H         LINE#         66
+  C:0045H         LINE#         67
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SHUMAGUAN
+
+Program Size: data=9.0 xdata=0 code=116
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

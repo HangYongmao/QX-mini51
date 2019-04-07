@@ -1,0 +1,94 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        11/28/2014  13:51:49  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 报警器.obj TO baojing
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  报警器.obj (报綺器)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  baojing (报綺器)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001CH     UNIT         ?PR?MAIN?报綺器
+            CODE    001FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    002BH     0005H     UNIT         ?PR?DELAY500?报綺器
+
+
+
+OVERLAY MAP OF MODULE:   baojing (报綺器)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?报綺器
+
+?PR?MAIN?报綺器
+  +--> ?PR?DELAY500?报綺器
+
+
+
+SYMBOL TABLE OF MODULE:  baojing (报綺器)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        报綺器
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  B:00B0H.6       PUBLIC        BEEP
+  C:0003H         PUBLIC        main
+  C:002BH         PUBLIC        delay500
+  -------         PROC          DELAY500
+  -------         DO            
+  D:0007H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  13:51:49  PAGE 2
+
+
+  -------         ENDDO         
+  C:002BH         LINE#         27
+  C:002BH         LINE#         28
+  C:002BH         LINE#         30
+  C:002FH         LINE#         31
+  -------         ENDPROC       DELAY500
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         36
+  C:0003H         LINE#         37
+  C:0003H         LINE#         39
+  C:0003H         LINE#         40
+  C:0003H         LINE#         41
+  C:0005H         LINE#         42
+  C:0005H         LINE#         43
+  C:0007H         LINE#         44
+  C:000AH         LINE#         45
+  C:000CH         LINE#         47
+  C:0014H         LINE#         48
+  C:0014H         LINE#         49
+  C:0016H         LINE#         50
+  C:0019H         LINE#         51
+  C:001CH         LINE#         52
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        报綺器
+
+Program Size: data=9.0 xdata=0 code=48
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

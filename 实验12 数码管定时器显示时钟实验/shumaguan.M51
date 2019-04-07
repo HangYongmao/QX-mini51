@@ -1,0 +1,176 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        11/28/2014  14:24:54  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE shumaguan.obj TO shumaguan RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  shumaguan.obj (SHUMAGUAN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  shumaguan (SHUMAGUAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         ?DT?SHUMAGUAN
+            IDATA   000EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0052H     UNIT         ?PR?DISPLAY?SHUMAGUAN
+            CODE    0060H     003DH     UNIT         ?PR?T0?SHUMAGUAN
+            CODE    009DH     0021H     UNIT         ?PR?MAIN?SHUMAGUAN
+            CODE    00BEH     000EH     UNIT         ?PR?_DELAY?SHUMAGUAN
+            CODE    00CCH     000CH     UNIT         ?C_C51STARTUP
+            CODE    00D8H     000AH     UNIT         ?CO?SHUMAGUAN
+
+
+
+OVERLAY MAP OF MODULE:   shumaguan (SHUMAGUAN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SHUMAGUAN
+
+?PR?MAIN?SHUMAGUAN
+  +--> ?PR?DISPLAY?SHUMAGUAN
+
+?PR?DISPLAY?SHUMAGUAN
+  +--> ?CO?SHUMAGUAN
+  +--> ?PR?_DELAY?SHUMAGUAN
+
+
+
+SYMBOL TABLE OF MODULE:  shumaguan (SHUMAGUAN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  14:24:54  PAGE 2
+
+
+
+  -------         MODULE        SHUMAGUAN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0008H         SYMBOL        second
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  C:00D8H         PUBLIC        table
+  D:00A8H         PUBLIC        IE
+  C:00BEH         PUBLIC        _delay
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A0H.1       PUBLIC        P2_1
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  D:0009H         SYMBOL        minute
+  D:00B8H         PUBLIC        IP
+  D:000AH         PUBLIC        tcount
+  C:0060H         PUBLIC        t0
+  C:009DH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  D:000CH         SYMBOL        hour
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:000DH         PUBLIC        m
+  C:000EH         PUBLIC        display
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        i
+  -------         DO            
+  D:0007H         SYMBOL        j
+  D:0006H         SYMBOL        k
+  -------         ENDDO         
+  C:00BEH         LINE#         27
+  C:00BEH         LINE#         28
+  C:00BEH         LINE#         30
+  C:00C4H         LINE#         31
+  C:00CBH         LINE#         32
+  -------         ENDPROC       _DELAY
+  -------         PROC          DISPLAY
+  C:000EH         LINE#         34
+  C:000EH         LINE#         35
+  C:000EH         LINE#         37
+  C:001AH         LINE#         38
+  C:001CH         LINE#         39
+  C:0021H         LINE#         40
+  C:0023H         LINE#         42
+  C:0030H         LINE#         43
+  C:0032H         LINE#         44
+  C:0037H         LINE#         45
+  C:0039H         LINE#         47
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  14:24:54  PAGE 3
+
+
+  C:0042H         LINE#         48
+  C:0044H         LINE#         49
+  C:0049H         LINE#         50
+  C:004BH         LINE#         52
+  C:0056H         LINE#         53
+  C:0058H         LINE#         54
+  C:005DH         LINE#         55
+  C:005FH         LINE#         57
+  -------         ENDPROC       DISPLAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:009DH         LINE#         60
+  C:009DH         LINE#         61
+  C:009DH         LINE#         63
+  C:00A0H         LINE#         64
+  C:00A3H         LINE#         65
+  C:00A6H         LINE#         66
+  C:00A8H         LINE#         67
+  C:00AAH         LINE#         68
+  C:00ACH         LINE#         70
+  C:00ACH         LINE#         71
+  C:00ACH         LINE#         73
+  C:00B0H         LINE#         74
+  C:00B0H         LINE#         75
+  C:00B3H         LINE#         76
+  -------         ENDPROC       MAIN
+  -------         PROC          T0
+  C:0060H         LINE#         89
+  C:0064H         LINE#         90
+  C:006CH         LINE#         92
+  C:0074H         LINE#         93
+  C:007AH         LINE#         94
+  C:007CH         LINE#         96
+  C:0081H         LINE#         97
+  C:0084H         LINE#         98
+  C:0086H         LINE#         100
+  C:008BH         LINE#         101
+  C:008EH         LINE#         102
+  C:0090H         LINE#         104
+  C:0095H         LINE#         105
+  C:0098H         LINE#         106
+  C:0098H         LINE#         107
+  C:0098H         LINE#         108
+  C:0098H         LINE#         109
+  C:0098H         LINE#         110
+  -------         ENDPROC       T0
+  -------         ENDMOD        SHUMAGUAN
+
+Program Size: data=15.0 xdata=0 code=218
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

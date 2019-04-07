@@ -1,0 +1,186 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        11/28/2014  13:49:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE KEY-CONTROL-PWM-LED.obj TO KEY-CONTROL-PWM-LED
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  KEY-CONTROL-PWM-LED.obj (KEY_CONTROL_PWM_LED)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  KEY-CONTROL-PWM-LED (KEY_CONTROL_PWM_LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?KEY_CONTROL_PWM_LED
+            DATA    0009H     0001H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0007H     UNIT         ?PR?_DELAY?KEY_CONTROL_PWM_LED
+                    000AH     0001H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0006H     UNIT         ?PR?TIMER1?KEY_CONTROL_PWM_LED
+            CODE    0014H     0004H     UNIT         ?C_INITSEG
+                    0018H     0003H                  *** GAP ***
+            CODE    001BH     0003H     ABSOLUTE     
+            CODE    001EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    00AAH     0045H     UNIT         ?PR?MAIN?KEY_CONTROL_PWM_LED
+            CODE    00EFH     001AH     UNIT         ?PR?BEEP?KEY_CONTROL_PWM_LED
+            CODE    0109H     0012H     UNIT         ?PR?_DELAYMS?KEY_CONTROL_PWM_LED
+            CODE    011BH     0011H     UNIT         ?PR?TIMER0?KEY_CONTROL_PWM_LED
+
+
+
+OVERLAY MAP OF MODULE:   KEY-CONTROL-PWM-LED (KEY_CONTROL_PWM_LED)
+
+
+SEGMENT                                    DATA_GROUP 
+  +--> CALLED SEGMENT                    START    LENGTH
+--------------------------------------------------------
+?C_C51STARTUP                            -----    -----
+  +--> ?PR?MAIN?KEY_CONTROL_PWM_LED
+  +--> ?C_INITSEG
+
+?PR?MAIN?KEY_CONTROL_PWM_LED             -----    -----
+  +--> ?PR?_DELAYMS?KEY_CONTROL_PWM_LED
+  +--> ?PR?BEEP?KEY_CONTROL_PWM_LED
+
+?PR?BEEP?KEY_CONTROL_PWM_LED             0009H    0001H
+  +--> ?PR?_DELAY?KEY_CONTROL_PWM_LED
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  13:49:12  PAGE 2
+
+
+  +--> ?PR?_DELAYMS?KEY_CONTROL_PWM_LED
+
+
+
+SYMBOL TABLE OF MODULE:  KEY-CONTROL-PWM-LED (KEY_CONTROL_PWM_LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        KEY_CONTROL_PWM_LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  C:0003H         PUBLIC        _delay
+  B:00B0H.6       PUBLIC        BEEP
+  C:00AAH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:00A8H.1       PUBLIC        ET0
+  B:00A8H.3       PUBLIC        ET1
+  D:008CH         PUBLIC        TH0
+  D:008DH         PUBLIC        TH1
+  D:008AH         PUBLIC        TL0
+  D:008BH         PUBLIC        TL1
+  C:011BH         PUBLIC        timer0
+  C:000EH         PUBLIC        timer1
+  B:0088H.4       PUBLIC        TR0
+  B:0088H.6       PUBLIC        TR1
+  C:0109H         PUBLIC        _delayms
+  D:0008H         PUBLIC        PWM
+  B:00B0H.4       PUBLIC        K1
+  B:00B0H.5       PUBLIC        K2
+  C:00EFH         PUBLIC        Beep
+  -------         PROC          MAIN
+  C:00AAH         LINE#         32
+  C:00AAH         LINE#         33
+  C:00AAH         LINE#         34
+  C:00ADH         LINE#         35
+  C:00B0H         LINE#         36
+  C:00B3H         LINE#         37
+  C:00B6H         LINE#         39
+  C:00B9H         LINE#         40
+  C:00BCH         LINE#         42
+  C:00BEH         LINE#         43
+  C:00C0H         LINE#         44
+  C:00C2H         LINE#         46
+  C:00C4H         LINE#         48
+  C:00C4H         LINE#         49
+  C:00C4H         LINE#         50
+  C:00C4H         LINE#         51
+  C:00C9H         LINE#         52
+  C:00D2H         LINE#         53
+  C:00D5H         LINE#         54
+  C:00D5H         LINE#         55
+  C:00D8H         LINE#         57
+  C:00D8H         LINE#         58
+  C:00DEH         LINE#         59
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  13:49:12  PAGE 3
+
+
+  C:00E7H         LINE#         60
+  C:00EAH         LINE#         61
+  C:00EAH         LINE#         62
+  C:00EDH         LINE#         63
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0
+  C:011BH         LINE#         69
+  C:011BH         LINE#         71
+  C:011DH         LINE#         72
+  C:0120H         LINE#         73
+  C:0123H         LINE#         74
+  C:0126H         LINE#         75
+  C:0128H         LINE#         76
+  C:012BH         LINE#         77
+  -------         ENDPROC       TIMER0
+  -------         PROC          TIMER1
+  C:000EH         LINE#         82
+  C:000EH         LINE#         84
+  C:0010H         LINE#         85
+  C:0013H         LINE#         86
+  -------         ENDPROC       TIMER1
+  -------         PROC          BEEP
+  -------         DO            
+  D:0009H         SYMBOL        i
+  -------         ENDDO         
+  C:00EFH         LINE#         92
+  C:00EFH         LINE#         93
+  C:00EFH         LINE#         95
+  C:00F2H         LINE#         96
+  C:00F2H         LINE#         97
+  C:00F7H         LINE#         98
+  C:00F9H         LINE#         99
+  C:0102H         LINE#         100
+  C:0104H         LINE#         101
+  -------         ENDPROC       BEEP
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        t
+  C:0003H         LINE#         107
+  C:0003H         LINE#         108
+  C:0003H         LINE#         109
+  C:0009H         LINE#         110
+  -------         ENDPROC       _DELAY
+  -------         PROC          _DELAYMS
+  D:0007H         SYMBOL        ms
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0109H         LINE#         115
+  C:0109H         LINE#         117
+  C:0109H         LINE#         119
+  C:010FH         LINE#         120
+  C:010FH         LINE#         121
+  C:011AH         LINE#         122
+  C:011AH         LINE#         123
+  -------         ENDPROC       _DELAYMS
+  -------         ENDMOD        KEY_CONTROL_PWM_LED
+
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  13:49:12  PAGE 4
+
+
+Program Size: data=11.0 xdata=0 code=296
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

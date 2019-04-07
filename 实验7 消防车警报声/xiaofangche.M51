@@ -1,0 +1,144 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/15/2014  17:26:37  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\OFFICE_DATA\SOFTWARE\KEIL 9.0\C51\BIN\BL51.EXE xiaofangche.obj TO xiaofangche
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  xiaofangche.obj (XIAOFANGCHE)
+  F:\OFFICE_DATA\SOFTWARE\KEIL 9.0\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  xiaofangche (XIAOFANGCHE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?XIAOFANGCHE
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0034H     UNIT         ?PR?MAIN?XIAOFANGCHE
+            CODE    0042H     0011H     UNIT         ?PR?KEY_CONTROL?XIAOFANGCHE
+            CODE    0053H     000EH     UNIT         ?PR?DELAY?XIAOFANGCHE
+            CODE    0061H     000CH     UNIT         ?C_C51STARTUP
+            CODE    006DH     0009H     UNIT         ?PR?TIME0?XIAOFANGCHE
+
+
+
+OVERLAY MAP OF MODULE:   xiaofangche (XIAOFANGCHE)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?XIAOFANGCHE
+
+?PR?MAIN?XIAOFANGCHE
+  +--> ?PR?KEY_CONTROL?XIAOFANGCHE
+  +--> ?PR?DELAY?XIAOFANGCHE
+
+
+
+SYMBOL TABLE OF MODULE:  xiaofangche (XIAOFANGCHE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        XIAOFANGCHE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/15/2014  17:26:37  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:0008H         PUBLIC        Count
+  C:0053H         PUBLIC        delay
+  B:00B0H.6       PUBLIC        BEEP
+  C:000EH         PUBLIC        main
+  C:0042H         PUBLIC        key_control
+  D:0089H         PUBLIC        TMOD
+  C:006DH         PUBLIC        Time0
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  B:00B0H.5       PUBLIC        K1
+  B:00B0H.4       PUBLIC        K2
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        k
+  -------         ENDDO         
+  C:0053H         LINE#         28
+  C:0053H         LINE#         29
+  C:0053H         LINE#         31
+  C:0060H         LINE#         32
+  -------         ENDPROC       DELAY
+  -------         PROC          KEY_CONTROL
+  C:0042H         LINE#         37
+  C:0042H         LINE#         38
+  C:0042H         LINE#         40
+  C:0045H         LINE#         41
+  C:0045H         LINE#         42
+  C:0048H         LINE#         43
+  C:004AH         LINE#         44
+  C:004AH         LINE#         45
+  C:004DH         LINE#         46
+  C:004DH         LINE#         47
+  C:0050H         LINE#         48
+  C:0052H         LINE#         49
+  C:0052H         LINE#         50
+  -------         ENDPROC       KEY_CONTROL
+  -------         PROC          MAIN
+  C:000EH         LINE#         54
+  C:000EH         LINE#         55
+  C:000EH         LINE#         56
+  C:0011H         LINE#         57
+  C:0014H         LINE#         58
+  C:0017H         LINE#         59
+  C:0019H         LINE#         60
+  C:001BH         LINE#         62
+  C:001EH         LINE#         63
+  C:0023H         LINE#         64
+  C:0027H         LINE#         66
+  C:0027H         LINE#         67
+  C:0027H         LINE#         69
+  C:0027H         LINE#         70
+  C:0029H         LINE#         71
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/15/2014  17:26:37  PAGE 3
+
+
+  C:002CH         LINE#         72
+  C:002FH         LINE#         73
+  C:0034H         LINE#         76
+  C:0034H         LINE#         77
+  C:0036H         LINE#         78
+  C:0039H         LINE#         79
+  C:003CH         LINE#         80
+  C:0040H         LINE#         81
+  -------         ENDPROC       MAIN
+  -------         PROC          TIME0
+  C:006DH         LINE#         87
+  C:006DH         LINE#         89
+  C:0070H         LINE#         90
+  C:0073H         LINE#         91
+  C:0075H         LINE#         92
+  -------         ENDPROC       TIME0
+  -------         ENDMOD        XIAOFANGCHE
+
+Program Size: data=10.0 xdata=0 code=110
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

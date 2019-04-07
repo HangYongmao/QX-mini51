@@ -1,0 +1,131 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        11/28/2014  14:10:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE di di baojing.obj TO di di baojing
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  di di baojing.obj (DI_DI_BAOJING)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  di di baojing (DI_DI_BAOJING)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?DI_DI_BAOJING
+                    000AH     0016H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?DI_DI_BAOJING
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     002AH     UNIT         ?PR?MAIN?DI_DI_BAOJING
+            CODE    0038H     002AH     UNIT         ?PR?TIME0?DI_DI_BAOJING
+            CODE    0062H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   di di baojing (DI_DI_BAOJING)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?DI_DI_BAOJING
+
+
+
+SYMBOL TABLE OF MODULE:  di di baojing (DI_DI_BAOJING)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DI_DI_BAOJING
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  B:0020H.0       PUBLIC        flag
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  14:10:36  PAGE 2
+
+
+  B:00B0H.6       PUBLIC        BEEP
+  C:000EH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  D:0008H         PUBLIC        Count1
+  D:0009H         PUBLIC        Count2
+  C:0038H         PUBLIC        Time0
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  B:00B0H.5       PUBLIC        K1
+  B:00B0H.4       PUBLIC        K2
+  -------         PROC          MAIN
+  C:000EH         LINE#         33
+  C:000EH         LINE#         34
+  C:000EH         LINE#         35
+  C:0011H         LINE#         36
+  C:0013H         LINE#         37
+  C:0015H         LINE#         38
+  C:0017H         LINE#         39
+  C:0019H         LINE#         40
+  C:001CH         LINE#         41
+  C:001FH         LINE#         42
+  C:0022H         LINE#         43
+  C:0024H         LINE#         44
+  C:0026H         LINE#         46
+  C:0026H         LINE#         47
+  C:0026H         LINE#         48
+  C:0029H         LINE#         49
+  C:0029H         LINE#         50
+  C:002CH         LINE#         51
+  C:002EH         LINE#         52
+  C:002EH         LINE#         53
+  C:0031H         LINE#         54
+  C:0031H         LINE#         55
+  C:0034H         LINE#         56
+  C:0036H         LINE#         57
+  C:0036H         LINE#         58
+  -------         ENDPROC       MAIN
+  -------         PROC          TIME0
+  C:0038H         LINE#         64
+  C:003CH         LINE#         66
+  C:003FH         LINE#         67
+  C:0042H         LINE#         68
+  C:0044H         LINE#         69
+  C:0049H         LINE#         70
+  C:0049H         LINE#         71
+  C:004BH         LINE#         72
+  C:0050H         LINE#         73
+  C:0050H         LINE#         74
+  C:0053H         LINE#         75
+  C:0056H         LINE#         76
+  C:0058H         LINE#         77
+  C:0058H         LINE#         78
+  C:0058H         LINE#         79
+  C:005BH         LINE#         80
+  C:005BH         LINE#         81
+BL51 BANKED LINKER/LOCATER V6.05                                                      11/28/2014  14:10:36  PAGE 3
+
+
+  C:005DH         LINE#         82
+  C:005DH         LINE#         84
+  -------         ENDPROC       TIME0
+  -------         ENDMOD        DI_DI_BAOJING
+
+Program Size: data=11.1 xdata=0 code=102
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

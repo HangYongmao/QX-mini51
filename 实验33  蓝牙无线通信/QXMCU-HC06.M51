@@ -1,0 +1,260 @@
+BL51 BANKED LINKER/LOCATER V6.05                                                        04/17/2015  21:01:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.05, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, QXMCU-HC06.obj TO QXMCU-HC06 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  QXMCU-HC06.obj (QXMCU_HC06)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  QXMCU-HC06 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         ?DT?QXMCU_HC06
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0037H     UNIT         ?PR?CTRL?QXMCU_HC06
+            CODE    00C6H     001EH     UNIT         ?PR?_DELAY1?QXMCU_HC06
+            CODE    00E4H     001DH     UNIT         ?PR?_SEND?QXMCU_HC06
+            CODE    0101H     001AH     UNIT         ?PR?INIT?QXMCU_HC06
+            CODE    011BH     0017H     UNIT         ?PR?_DISPLAY?QXMCU_HC06
+            CODE    0132H     0012H     UNIT         ?PR?MAIN?QXMCU_HC06
+            CODE    0144H     000AH     UNIT         ?CO?QXMCU_HC06
+            CODE    014EH     0005H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   QXMCU-HC06 (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?QXMCU_HC06
+  +--> ?C_INITSEG
+
+?PR?MAIN?QXMCU_HC06
+  +--> ?PR?INIT?QXMCU_HC06
+  +--> ?PR?_DISPLAY?QXMCU_HC06
+  +--> ?PR?CTRL?QXMCU_HC06
+
+?PR?_DISPLAY?QXMCU_HC06
+  +--> ?CO?QXMCU_HC06
+  +--> ?PR?_DELAY1?QXMCU_HC06
+
+?PR?CTRL?QXMCU_HC06
+BL51 BANKED LINKER/LOCATER V6.05                                                      04/17/2015  21:01:46  PAGE 2
+
+
+  +--> ?PR?_SEND?QXMCU_HC06
+
+
+
+SYMBOL TABLE OF MODULE:  QXMCU-HC06 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0003H         SEGMENT       ?C_C51STARTUP
+  I:000BH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0006H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0003H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0003H         LINE#         133
+  C:0005H         LINE#         134
+  C:0006H         LINE#         135
+  C:0007H         LINE#         136
+  C:0009H         LINE#         185
+  C:000CH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        QXMCU_HC06
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0144H         PUBLIC        table
+  D:00A8H         PUBLIC        IE
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  C:0132H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.05                                                      04/17/2015  21:01:46  PAGE 3
+
+
+  C:00E4H         PUBLIC        _send
+  D:0099H         PUBLIC        SBUF
+  D:0087H         PUBLIC        PCON
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:0101H         PUBLIC        init
+  C:008FH         PUBLIC        ctrl
+  C:00C6H         PUBLIC        _delay1
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  D:0008H         PUBLIC        tmp
+  B:0088H.6       PUBLIC        TR1
+  D:0009H         PUBLIC        c
+  B:0090H.0       PUBLIC        led1
+  D:00C8H         PUBLIC        T2CON
+  B:0090H.1       PUBLIC        led2
+  B:0090H.2       PUBLIC        led3
+  B:0090H.7       PUBLIC        led7
+  C:011BH         PUBLIC        _display
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY1
+  D:0006H         SYMBOL        z
+  -------         DO            
+  D:0006H         SYMBOL        x
+  D:0004H         SYMBOL        y
+  -------         ENDDO         
+  C:00C6H         LINE#         44
+  C:00C6H         LINE#         45
+  C:00C6H         LINE#         47
+  C:00CFH         LINE#         48
+  C:00E3H         LINE#         49
+  -------         ENDPROC       _DELAY1
+  -------         PROC          _DISPLAY
+  D:0007H         SYMBOL        value
+  -------         DO            
+  D:0007H         SYMBOL        shu1
+  D:0007H         SYMBOL        value1
+  -------         ENDDO         
+  C:011BH         LINE#         50
+  C:011BH         LINE#         51
+  C:011BH         LINE#         53
+  C:011EH         LINE#         55
+  C:0120H         LINE#         58
+  C:0126H         LINE#         59
+  C:0128H         LINE#         60
+  C:012FH         LINE#         61
+  C:0131H         LINE#         62
+  -------         ENDPROC       _DISPLAY
+  -------         PROC          MAIN
+  C:0132H         LINE#         68
+  C:0132H         LINE#         69
+  C:0132H         LINE#         70
+  C:0135H         LINE#         71
+  C:0135H         LINE#         72
+  C:0135H         LINE#         73
+  C:013AH         LINE#         74
+BL51 BANKED LINKER/LOCATER V6.05                                                      04/17/2015  21:01:46  PAGE 4
+
+
+  C:013DH         LINE#         75
+  C:013DH         LINE#         76
+  C:013FH         LINE#         77
+  C:0142H         LINE#         78
+  C:0142H         LINE#         79
+  -------         ENDPROC       MAIN
+  -------         PROC          INIT
+  C:0101H         LINE#         82
+  C:0101H         LINE#         83
+  C:0101H         LINE#         84
+  C:0103H         LINE#         85
+  C:0106H         LINE#         88
+  C:0109H         LINE#         89
+  C:010FH         LINE#         91
+  C:0112H         LINE#         92
+  C:0114H         LINE#         94
+  C:0116H         LINE#         95
+  C:0118H         LINE#         98
+  C:011AH         LINE#         99
+  -------         ENDPROC       INIT
+  -------         PROC          _SEND
+  D:0007H         SYMBOL        a
+  C:00E4H         LINE#         101
+  C:00E4H         LINE#         102
+  C:00E4H         LINE#         103
+  C:00E6H         LINE#         104
+  C:00E8H         LINE#         105
+  C:00EBH         LINE#         106
+  C:00EDH         LINE#         108
+  C:00F2H         LINE#         109
+  C:00F6H         LINE#         111
+  C:00F8H         LINE#         112
+  C:0100H         LINE#         113
+  -------         ENDPROC       _SEND
+  -------         PROC          CTRL
+  C:008FH         LINE#         115
+  C:008FH         LINE#         116
+  C:008FH         LINE#         117
+  C:00A2H         LINE#         118
+  C:00A2H         LINE#         119
+  C:00A2H         LINE#         120
+  C:00A4H         LINE#         121
+  C:00A4H         LINE#         122
+  C:00A6H         LINE#         123
+  C:00A6H         LINE#         124
+  C:00A8H         LINE#         125
+  C:00A8H         LINE#         126
+  C:00AAH         LINE#         127
+  C:00AAH         LINE#         128
+  C:00ACH         LINE#         129
+  C:00AEH         LINE#         130
+  C:00AEH         LINE#         131
+  C:00B0H         LINE#         132
+  C:00B0H         LINE#         133
+  C:00B2H         LINE#         134
+  C:00B4H         LINE#         135
+  C:00B4H         LINE#         136
+BL51 BANKED LINKER/LOCATER V6.05                                                      04/17/2015  21:01:46  PAGE 5
+
+
+  C:00B6H         LINE#         137
+  C:00B6H         LINE#         138
+  C:00B8H         LINE#         139
+  C:00B8H         LINE#         140
+  C:00BAH         LINE#         141
+  C:00BAH         LINE#         142
+  C:00BCH         LINE#         143
+  C:00BEH         LINE#         144
+  C:00C0H         LINE#         145
+  C:00C5H         LINE#         146
+  C:00C5H         LINE#         147
+  -------         ENDPROC       CTRL
+  -------         ENDMOD        QXMCU_HC06
+
+Program Size: data=12.0 xdata=0 code=339
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
